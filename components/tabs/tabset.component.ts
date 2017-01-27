@@ -102,7 +102,7 @@ export class TabsetComponent implements OnInit, OnDestroy {
     for (let step = 1; step <= tabsLength; step += 1) {
       let prevIndex = index - step;
       let nextIndex = index + step;
-      if (this.tabs[prevIndex] && !this.tabs[prevIndex].disabled) {
+      if (prevIndex!==0 && this.tabs[prevIndex] && !this.tabs[prevIndex].disabled) {
         return prevIndex;
       }
       if (this.tabs[nextIndex] && !this.tabs[nextIndex].disabled) {

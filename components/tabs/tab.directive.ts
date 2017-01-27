@@ -57,8 +57,4 @@ export class TabDirective implements OnDestroy {
   public ngOnInit():void {
     this.removable = !!this.removable;
   }
-
-  public ngOnDestroy():void {
-    this.tabset.removeTab(this);
-  }
 }
